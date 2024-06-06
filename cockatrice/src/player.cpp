@@ -223,9 +223,12 @@ Player::Player(const ServerInfo_User &info, int _id, bool _local, bool _judge, T
         aOpenDeckInDeckEditor->setEnabled(false);
         connect(aOpenDeckInDeckEditor, SIGNAL(triggered()), this, SLOT(actOpenDeckInDeckEditor()));
     }
-
+	
     aViewGraveyard = new QAction(this);
     connect(aViewGraveyard, SIGNAL(triggered()), this, SLOT(actViewGraveyard()));
+
+    aCountTypesGraveyard = new QAction(this);
+	//TODO
 
     aViewRfg = new QAction(this);
     connect(aViewRfg, SIGNAL(triggered()), this, SLOT(actViewRfg()));
